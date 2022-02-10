@@ -5,7 +5,7 @@
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
-
+    text-decoration: none;
 }
 
 body {
@@ -14,8 +14,14 @@ body {
     height: 100%;
 }
 
+main {
+    width: 100%;
+}
+
 /* display flex*/
-#header, .nav-menu, .icon, .intro, .intro-content, .intro-information, .intro-banner {
+#header, .nav-menu, .icon, .intro, .intro-content, .intro-information, .intro-banner,
+.intro-img-container, .learn-more, .intro-button, .intro-container, .starter-section, .moto-logo,
+.year-level-container, .year-level, .section-container {
     display: flex;
 }
 
@@ -26,15 +32,22 @@ body {
 } */
 
 /* allign center - collumn*/
-.intro-information, .intro-banner {
+.intro-information, .intro-banner, .starter-section, .moto-logo, .year-level, .section-container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+/* allign center - row*/
+.year-level-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 
 /* pointer-cursor */
-.nav-item, .logo, .icon {
+.nav-item, .logo, .icon, .intro-button {
     cursor: pointer;
 }
 
@@ -114,14 +127,24 @@ body {
 
 }
 
-/* background-image: url(img/75-years-school-bg.png), url(img/75-years-bg.jpg);
-background-position: 0px 350px, center;
-background-size: contain, contain;
-background-repeat: no-repeat, no-repeat; */
+.intro-container {
+    height: 60%;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 .intro-content {
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     width: 80%;
+}
+
+.intro-img-container {
+    height: 100%;
+    width: 300px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .intro-img {
@@ -136,4 +159,71 @@ background-repeat: no-repeat, no-repeat; */
     font-size: 75px;
     text-align: center;
     font-weight: 700;
+    flex-wrap: wrap;
+}
+
+.learn-more {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-button {
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #fff;
+    background-color: #049948;
+    height: 2.5rem;
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #049948;
+    border-width: 1px;
+}
+
+.intro-button:hover {
+    border-style: solid;
+    background-color: #09593c;
+}
+
+.starter-section {
+    background-color: #f1efe4;
+    width: 100%;
+}
+
+.section-container {
+    width: 98%;
+    height: 25rem;
+    margin: 10px 15px 10px 15px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #07683b;
+}
+
+
+.moto-logo {
+    width: 100%;
+    height: 101px;
+}
+
+.moto-logo>img {
+    width: 15rem;
+    height: auto;
+}
+
+.uc-greet {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    border-style: solid;
+    border-width: 3px 0 3px 0;
+    border-color: #dee2e6;
+}
+
+.year-level-container {
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
