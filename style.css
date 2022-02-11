@@ -47,7 +47,7 @@ main {
 
 
 /* pointer-cursor */
-.nav-item, .logo, .icon, .intro-button {
+.nav-item, .logo, .icon, .intro-button, .year-level>a>span {
     cursor: pointer;
 }
 
@@ -190,27 +190,34 @@ main {
 }
 
 .starter-section {
-    background-color: #f1efe4;
+    background-color: #faf6e7;
     width: 100%;
 }
 
 .section-container {
-    width: 98%;
-    height: 25rem;
-    margin: 10px 15px 10px 15px;
-    border-style: solid;
+    width: 100%;
+    height: 27rem;
+    padding: 10px 15px 10px 15px;
+    /* border-style: solid;
     border-width: 3px;
-    border-color: #07683b;
+    border-color: #07683b; */
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #07683b;
+    outline-offset: -15px;
 }
+
+.section-content {}
 
 
 .moto-logo {
     width: 100%;
     height: 101px;
+    margin-bottom: 25px;
 }
 
 .moto-logo>img {
-    width: 15rem;
+    width: 17rem;
     height: auto;
 }
 
@@ -219,11 +226,41 @@ main {
     font-weight: bold;
     padding: 10px 0 10px 0;
     border-style: solid;
-    border-width: 3px 0 3px 0;
+    border-width: 2px 0 2px 0;
     border-color: #dee2e6;
 }
 
 .year-level-container {
+    margin-top: 25px;
     flex-wrap: wrap;
     align-items: flex-start;
+    width: 100%;
+    height: 7rem;
+    justify-content: space-around;
+
+}
+
+.year-level {
+    width: 25%;
+    height: 100%;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    border-style: solid;
+    border-color: #dee2e6;
+    border-width: 0 0 0 2px;
+    font-size: 20px;
+
+}
+
+.year-level>a>span {
+    color: #09593c;
+    font-weight: 600;
+}
+
+.year-level>a>span:hover{
+    color: #049948;
+}
+
+.year-level>a>h5 {
+    font-weight: normal;
 }
