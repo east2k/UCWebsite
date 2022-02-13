@@ -21,7 +21,8 @@ main {
 /* display flex*/
 #header, .nav-menu, .icon, .intro, .intro-content, .intro-information, .intro-banner,
 .intro-img-container, .learn-more, .intro-button, .intro-container, .starter-section, .moto-logo,
-.year-level-container, .year-level, .section-container {
+.year-level-container, .year-level, .section-container, .video, .section.title, .card, .card-container,
+.card-row {
     display: flex;
 }
 
@@ -32,14 +33,15 @@ main {
 } */
 
 /* allign center - collumn*/
-.intro-information, .intro-banner, .starter-section, .moto-logo, .year-level, .section-container {
+.intro-information, .intro-banner, .starter-section, .moto-logo, .year-level,
+.section-container, .video, .section.title, .card-container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 /* allign center - row*/
-.year-level-container {
+.year-level-container, .card-row {
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -86,6 +88,10 @@ main {
     background-color: #049948;
     color: #fff;
     border-radius: 5px 5px 0 0;
+}
+
+.nav-item:active {
+    background-color: #09573b;
 }
 
 .logo-container {
@@ -207,8 +213,6 @@ main {
     outline-offset: -15px;
 }
 
-.section-content {}
-
 
 .moto-logo {
     width: 100%;
@@ -257,10 +261,51 @@ main {
     font-weight: 600;
 }
 
-.year-level>a>span:hover{
+.year-level>a>span:hover {
     color: #049948;
 }
 
 .year-level>a>h5 {
     font-weight: normal;
+}
+
+.video {
+    background-color: #000;
+}
+
+.section-title {
+    width: 100%;
+    height: 5.7rem;
+    padding: 25px 15px;
+    background-color: #09593c;
+    color: #fff;
+}
+
+.section-title>h3 {
+    letter-spacing: 0.8rem;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-container {
+    width: 100%;
+    height: auto;
+}
+
+.card-row {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 33.33%;
+    height: 350px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.card>h2 {
+    text-align: center;
+    width: 100%;
 }
